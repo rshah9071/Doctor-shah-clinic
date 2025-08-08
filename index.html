@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Shah Clinic - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-top">
+                <h1 class="logo">Doctor Shah Clinic</h1>
+                <div class="contact-info">
+                    <div class="contact-info-block">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+1234567890">123-456-7890</a>
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/1234567890" target="_blank">123-456-7890</a>
+                        <span>24/7 Emergency Service</span>
+                    </div>
+                    <div class="contact-info-block">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@doctorshahclinic.com">info@doctorshahclinic.com</a>
+                        <span>Email Us</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h2>Your Health, Our Priority</h2>
+                <p>Providing compassionate and expert care for our community.</p>
+                <a href="contact.html" class="button">Book an Appointment</a>
+            </div>
+        </section>
+
+        <section id="emergency-services-highlight" class="content-block even">
+            <div class="container">
+                <h3><i class="fas fa-ambulance"></i> 24/7 Emergency & Critical Care</h3>
+                <p>
+                    Your health is our top priority, which is why we offer **24/7 Emergency Services**. Our facility is fully equipped with dedicated **ICU** and **CCU** units to provide immediate and expert care for all critical medical needs.
+                </p>
+                <a href="services.html" class="button-secondary">Learn More About Our Critical Care</a>
+            </div>
+        </section>
+
+        <section id="about-us" class="content-block">
+            <div class="container">
+                <h3>About Our Clinic</h3>
+                <p>
+                    Doctor Shah Clinic is dedicated to offering personalized and high-quality healthcare. We are committed to a patient-first approach, combining compassionate care with modern medical practices to ensure you and your family receive the best possible treatment.
+                </p>
+                <a href="about.html" class="button-secondary">Learn More</a>
+            </div>
+        </section>
+        
+        <section id="image-carousel" class="content-block even">
+            <div class="image-slideshow">
+                <img class="mySlides" src="images/image-1.jpeg" alt="">
+                <img class="mySlides" src="images/image-2.jpeg" alt="">
+                <img class="mySlides" src="images/image-3.jpeg" alt="">
+                <img class="mySlides" src="images/image-4.jpeg" alt="">
+            </div>
+        </section>
+
+        <section id="services" class="content-block">
+            <div class="container">
+                <a href="services.html"><h3>Our Services</h3></a>
+                <p>We provide a wide range of medical services to meet your family's health needs. Click the heading above to see all the services we offer.</p>
+            </div>
+        </section>
+
+        <section id="doctors-home" class="content-block even">
+            <div class="container">
+                <h3>Meet Our Doctors</h3>
+                <p>Learn more about our highly qualified and experienced medical team.</p>
+                <a href="doctors.html" class="button-secondary">View Our Doctors</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© <span id="current-year"></span> Doctor Shah Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000); // Change image every 3 seconds
+        }
+    </script>
+
+</body>
+</html>
